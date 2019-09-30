@@ -6,7 +6,7 @@ require 'httpclient'
 module GHPreview
   class Wrapper
     GITHUB_URL               = 'https://github.com'
-    STYLED_TEMPLATE_FILEPATH = '/tmp/ghpreview-template.erb'
+    STYLED_TEMPLATE_FILEPATH = (ENV['TMPDIR'] || '/tmp/') + 'ghpreview-template.erb'
     TEMPLATE_CACHE_DURATION  = 60 * 60 * 24 * 7 # one week
     RAW_TEMPLATE_FILEPATH    = "#{File.dirname(__FILE__)}/template.erb"
 

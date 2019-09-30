@@ -1,6 +1,6 @@
 language: ruby
 global:
-    - TMPDIR=/tmp
+    - TMPDIR=tmp
 rvm:
   - 2.4.7
   - 2.5.6
